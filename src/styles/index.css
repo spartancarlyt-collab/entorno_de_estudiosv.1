@@ -366,3 +366,180 @@ textarea.input {
   background: var(--accent);
   color: white;
 }
+
+.app-header {
+  display: none;
+}
+
+.app-title {
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .app-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .main-content {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .main-content {
+    padding: 20px;
+    padding-bottom: 80px;
+  }
+
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+
+  .calendar-day {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  .timer-display {
+    font-size: 56px;
+  }
+
+  .timer-controls {
+    flex-wrap: wrap;
+  }
+
+  .timer-controls .btn {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  .task-item {
+    padding: 14px;
+    flex-wrap: wrap;
+  }
+
+  .task-item .btn-danger {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .flex-between {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+
+  .pomodoro-container {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .input {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mobile-menu {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    padding: 8px 0;
+    justify-content: space-around;
+    z-index: 100;
+  }
+
+  .mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .mobile-nav-item.active {
+    color: var(--accent);
+  }
+
+  .mobile-nav-item span:first-child {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 16px;
+    padding-bottom: 80px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .timer-display {
+    font-size: 48px;
+  }
+
+  .note-card {
+    padding: 14px;
+  }
+}
